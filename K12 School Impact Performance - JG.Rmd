@@ -11,7 +11,7 @@ library(lattice)
 
 
 ```{r}
-data_ip <- read.csv("C:\\R\\School Impact Performance.csv", sep = ",",header = TRUE)
+data_ip <- read.csv("C:\\School Impact Performance.csv", sep = ",",header = TRUE)
 ```
 
 
@@ -26,7 +26,7 @@ xyplot(Impact ~ Performance | SchoolType , data=data_ip ,
 
 
 ```{r}
-data_ipm <- read.csv("C:\\R\\2019School Impact Performance_M.csv", sep = ",",header = TRUE)
+data_ipm <- read.csv("C:\\2019School Impact Performance_M.csv", sep = ",",header = TRUE)
 ```
 
 
