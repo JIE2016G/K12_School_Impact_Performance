@@ -1,0 +1,50 @@
+---
+Title: "K12 School Impact Performance"
+Name: "Jie Gao"
+output: html_document
+---
+
+```{r}
+library(lattice)
+```
+
+
+
+```{r}
+data_ip <- read.csv("C:\\R\\School Impact Performance.csv", sep = ",",header = TRUE)
+```
+
+
+```{r,fig.width=8,fig.height=5}
+xyplot(Impact ~ Performance | SchoolType , data=data_ip , 
+       groups = SchoolType,
+       par.settings = list(superpose.symbol = list(col = c("#fa8072","#7a90e0","#40e0d0","#ffc380"),
+                                                   pch = 19)),
+       cex=1.2,
+       main="2019 New York City - District#1 Schools \n Impact and Performance")
+```
+
+
+```{r}
+data_ipm <- read.csv("C:\\R\\2019School Impact Performance_M.csv", sep = ",",header = TRUE)
+```
+
+
+```{r,fig.width=10,fig.height=10}
+xyplot(Impact ~ Performance | SchoolType , data=data_ipm ,type = c("p", "r") ,
+       groups = SchoolType,
+       par.settings = list(superpose.symbol = list(col = c("#fa8072","#7a90e0","#40e0d0","#ffc380"),
+                                                   pch = 19)),
+       cex=1.2,
+       main=list(label="2019 New York City - Manhattan Public Schools \n Impact and Performance",cex=1.5),
+       xlab=list(label="Performance", cex=1.2),
+       ylab=list(label="Impact", cex=1.2),
+       scales=list(cex=1)
+       )
+```
+
+
+
+
+
+
